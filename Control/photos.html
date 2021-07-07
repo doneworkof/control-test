@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Console | Картинки</title>
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <link href="../css/popup.css" rel="stylesheet" type="text/css">
+        <link href="console-style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <h1 class="logo">CONSOLE</h1>
+                <nav>
+                    <a href="index.html">Товары</a>
+                    <a href="photos.html">Картинки</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="imgContainer">
+                <div class="imgFrame" onclick="OpenImageLoader()">
+                    <div class="soft">
+                        <img src="img/add.png">
+                    </div>
+                    <h1>НОВОЕ ФОТО</h1>
+                </div>
+            </div>
+        </main>
+
+        <div class="popup">
+            <div class="popup-window loader">
+                <h1 class="header">Загрузка фото</h1>
+                <div class="loadzone" onclick="Loader_BrowseFiles()">
+                    <h1>Нажмите для выбора файла</h1>
+                    <h2>или</h2>
+                    <h3>Перетащите его сюда</h3>
+                </div>
+                <div class="soft">
+                    <img class="preview">
+                </div>
+                <div class="nameInput">
+                    <h2 class="photoHeader">Название фото:</h2>
+                    <input type="text" class="inputfield photoName" placeholder="Название">
+                </div>
+                <div class="controls">
+                    <input type="button" class="button" value="Отмена" onclick="TogglePopup(false)">
+                    <input type="button" class="button" value="Добавить" onclick="Loader_Done()">
+                </div>
+            </div>
+            <div class="popup-window edit">
+                <h1></h1>
+            </div>
+        </div>
+        <script src="js/photos.js"></script>
+    </body>
+</html>

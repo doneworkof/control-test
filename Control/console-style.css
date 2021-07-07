@@ -55,3 +55,179 @@ h1.header {
     text-align:center;
 }
 
+.imgContainer {
+    margin-top:65px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap:13px;
+}
+
+.imgFrame {
+    width:285px;
+    height:285px;
+    box-shadow:0px 0px 0px 1px inset white;
+
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    transition: box-shadow .35s;
+    cursor:pointer;
+}
+
+.imgFrame:hover {
+    box-shadow:0px 0px 0px 1px inset black;
+}
+
+.imgFrame .soft {
+    position:relative;
+    margin-top:2%;
+    width:96%;
+    height:215px;
+}
+
+.imgFrame .soft::before {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    box-shadow:0px 0px 5px 5px white inset;
+}
+
+.imgFrame img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.imgFrame h1 {
+    user-select: none;
+    cursor:normal;
+    margin-top:15px;
+    margin-bottom:0;
+    max-width:90%;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+
+
+/* PHOTOS POPUP WINDOWS */
+
+.loader {
+    height:auto;
+    max-height:650px;
+}
+
+.loader .header {
+    margin-top:5px;
+    cursor: default;
+    user-select: none;
+}
+
+.loadzone {
+    margin-top:13px;
+    width:85%;
+    height:250px;
+    background:#ececec;
+    border:dotted 3px grey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loadzone * {
+    color:#626262;
+    cursor:default;
+    user-select: none;
+}
+
+.loadzone .soft {
+    display:none;
+}
+
+.loadzone h1,h3 {
+    margin:0;
+    font-size:28px;
+}
+
+.loadzone h2 {
+    font-size:27px;
+    margin:15px 0px;
+}
+
+.nameInput {
+    margin-top:5px;
+    display:flex;
+    width:95%;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.nameInput h2 {
+    cursor: default;
+    user-select: none;
+}
+
+.controls {
+    outline:none;
+    margin-top:40px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content: center;
+    width:95%;
+    gap:15px;
+}
+
+.controls input {
+    font:normal 20px "Trebuchet MS";
+    padding:4px 0;
+    width:170px;
+    background:white;
+    border:solid 2px #868686;
+    color:#2a2a2a;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.controls input:first-child:hover {
+    border-color:#da3b3b;
+}
+
+.controls input:not(:first-child):hover {
+    border-color:#363636;
+}
+
+
+.loader .soft {
+    display:none;
+    position: relative;
+    width:auto;
+    max-width: 95%;
+    height:400px;
+    background:red;
+}
+.loader .soft::after {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    box-shadow:0px 0px 5px 7px white inset;
+}
+
+.loader .preview {
+    user-select: none;
+    pointer-events: none;
+    object-fit: cover;
+    max-width: 100%;
+    max-height:100%;
+    height:100%;
+}

@@ -14,7 +14,6 @@ nigga.onreadystatechange = function() {
 //nigga.open("GET",address);
 //nigga.send();
 
-
 function ConvertToBASE64(img) {
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
