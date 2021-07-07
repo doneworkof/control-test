@@ -1,0 +1,132 @@
+body {
+    margin:0;
+    padding:0;
+    font-family:"Trebuchet MS";
+    background:white;
+}
+
+h1 {
+    font-size:39px;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+.text {
+    font-size:21px;
+}
+
+main {
+    position: relative;
+    top:120px;
+    box-sizing: border-box;
+    padding:0px 20px;
+    width:100%;
+    max-width: 1500px;
+    height:100px;
+    margin:auto;
+}
+
+footer {
+
+}
+
+.inputfield {
+    position: relative;
+    height:29px;
+
+    outline:none;
+    border:none;
+    background:white;
+
+    font: normal 21px "Trebuchet MS";
+    border-bottom:1px solid #8b8b8b;
+}
+
+.inputfield:focus {
+    border-bottom:1px solid #313131;
+}
+
+.inputfield::selection {
+    background:#c8c8c8;
+    border-radius:10px;
+}
+
+.productList {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.product {
+    width:285px;
+    height:290px;
+    background:white;
+    overflow: hidden;
+    z-index:1;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    cursor:pointer;
+    box-sizing: border-box;
+    box-shadow:0px 0px 0px 1px white inset;
+    transition:box-shadow .4s;
+}
+
+.product:hover {
+    box-shadow:0px 0px 0px 1px black inset;
+}
+
+.notAvailable:hover {
+    box-shadow:0px 0px 0px 1px #be0000 inset;
+}
+
+.product .soft {
+    width:94%;
+    height:180px;
+    margin-top:3%;
+    box-shadow:0px 0px 5px 5px white inset;
+}
+
+.product img {
+    position: relative;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.productName {
+    font-size:32px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:90%;
+    margin-top:10px;
+    margin-bottom:0;
+    user-select: none;
+}
+
+.productCost {
+    margin-top:8px;
+    user-select: none;
+    align-self:flex-start;
+    margin-left:5%;
+    font-size:25px;
+    font-weight: bold;
+    margin-bottom:0;
+    max-width:90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notAvailable .productCost::after {
+    content:"нет в наличии";
+    color:#ec0000;
+    margin-left:15px;
+}
