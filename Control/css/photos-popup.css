@@ -1,0 +1,125 @@
+/* LOADER POPUP */
+
+.loader {
+    height:auto;
+    max-height:650px;
+}
+
+.loadzone {
+    margin-top:13px;
+    width:85%;
+    height:250px;
+    background:#ececec;
+    border:dotted 3px grey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loadzone * {
+    color:#626262;
+    cursor:default;
+    user-select: none;
+}
+
+.loadzone .soft {
+    display:none;
+}
+
+.loadzone h1,h3 {
+    margin:0;
+    font-size:28px;
+}
+
+.loadzone h2 {
+    font-size:27px;
+    margin:15px 0px;
+}
+
+.nameInput {
+    margin-top:5px;
+    display:flex;
+    width:95%;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.nameInput h2 {
+    cursor: default;
+    user-select: none;
+}
+
+.controls {
+    outline:none;
+    margin-top:40px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content: center;
+    width:95%;
+    gap:15px;
+}
+
+.loader .soft {
+    display:none;
+    width:auto;
+    max-width: 95%;
+    height:400px;
+}
+
+.loader .preview {
+    user-select: none;
+    pointer-events: none;
+    object-fit: cover;
+    max-width: 100%;
+    max-height:100%;
+    height:100%;
+}
+
+
+/* EDIT WINDOW */
+
+.edit {
+    height:auto;
+    max-height:550px;
+    width:auto;
+    max-width:850px;
+}
+
+.edit .content {
+    width:100%;
+    display:flex;
+    height:auto;
+}
+
+.edit .soft {
+    max-width: 498px;
+    height:450px;
+}
+
+.edit img {
+    user-select: none;
+    pointer-events: none;
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+
+.edit .actions {
+    width:332px;
+    overflow:hidden;
+    box-sizing: border-box;
+    padding:0 9px;
+}
+
+.edit .photoName {
+    width:100%;
+    font-size:36px;
+    height:42px;
+    margin-bottom:10px;
+}
+
+.edit .button {
+    margin-top:5px;
+}

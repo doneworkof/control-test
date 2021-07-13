@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Console | Товары</title>
         <link href="../css/style.css" rel="stylesheet" type="text/css">
-        <link href="console-style.css" rel="stylesheet" type="text/css">
+        <link href="../css/popup.css" rel="stylesheet" type="text/css">
+        <link href="css/console-style.css" rel="stylesheet" type="text/css">
+        <link href="css/products-popup.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <header>
@@ -19,11 +21,42 @@
             </div>
         </header>
         <main>
-            <div class="productList">
-                <img id="hello">
-            </div>
-            <script src="js/script.js"></script>
-            <script src="js/products.js"></script>
+            <div class="productList" style="margin-top:50px;"></div>
         </main>
+        <div class="popup">
+            <div class="popup-window edit">
+                <h1 class="header">Редактирование товара</h1>
+                <div class="information">
+                    <div class="soft">
+                        <img>
+                    </div>
+                    <div class="values">
+                        <input type="text" class="inputfield productName" placeholder="Название">
+                        <input type="text" class="costfield">
+                        <input type="checkbox" class="available" name="available">
+                        <label for="available">Есть в наличии</label>
+                    </div>
+                </div>
+                <h2>Статья товара</h2>
+                <div class="article"></div>
+                <div class="controls">
+                    <input type="button" class="button" value="Отмена" onclick="TogglePopup(false)">
+                    <input type="button" class="button" value="Готово">
+                </div>
+            </div>
+            <div class="popup-window edit-article">
+                <input type="button" class="return" onclick="EditArticle_Return()">
+                <h1 class="header">Редактирование статьи</h1>
+                <textarea class="code"></textarea>
+                <div class="controls">
+                    <input type="button" class="button" value="Отмена" onclick="TogglePopup(false)">
+                    <input type="button" class="button" value="Готово">
+                </div>
+            </div>
+        </div>
+
+        <script src="js/base.js"></script>
+        <script src="js/products.js"></script>
+        <script src="js/test-script.js"></script>
     </body>
 </html>

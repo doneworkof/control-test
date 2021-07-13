@@ -5,9 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Console | Картинки</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <link href="popup.css" rel="stylesheet" type="text/css">
-        <link href="console-style.css" rel="stylesheet" type="text/css">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <link href="../css/popup.css" rel="stylesheet" type="text/css">
+        <link href="css/console-style.css" rel="stylesheet" type="text/css">
+        <link href="css/photos-popup.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <header>
@@ -21,7 +22,7 @@
         </header>
         <main>
             <div class="imgContainer">
-                <div class="imgFrame" onclick="OpenImageLoader()">
+                <div class="imgFrame new" onclick="OpenImageLoader()">
                     <div class="soft">
                         <img src="img/add.png">
                     </div>
@@ -46,14 +47,27 @@
                     <input type="text" class="inputfield photoName" placeholder="Название">
                 </div>
                 <div class="controls">
-                    <input type="button" class="button" value="Отмена" onclick="TogglePopup(false)">
+                    <input type="button" class="button" value="Отмена" onclick="Loader_Cancel()">
                     <input type="button" class="button" value="Добавить" onclick="Loader_Done()">
                 </div>
             </div>
             <div class="popup-window edit">
-                <h1></h1>
+                <h1 class="header">Настройка фото</h1>
+                <div class="content">
+                        <div class="soft">
+                            <img>
+                        </div>
+                    <div class="actions">
+                        <input type="text" class="inputfield photoName" placeholder="Название">
+                        <input type="button" class="button" value="Готово" onclick="Edit_Done()">
+                        <input type="button" class="button" value="Отмена" onclick="TogglePopup(false)">
+                        <input type="button" class="button" value="Удалить" onclick="Edit_Delete()">
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="js/base.js"></script> 
         <script src="js/photos.js"></script>
+        <script src="js/test-script.js"></script>
     </body>
 </html>
